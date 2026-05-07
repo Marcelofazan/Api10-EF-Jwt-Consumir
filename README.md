@@ -18,27 +18,18 @@ Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendasAPI.W
 
 * Instalar pacotes necessários (Obrigatório)
 ```bash
-...
-	Install-Package Microsoft.EntityFrameworkCore.Tools
-	Install-Package Microsoft.EntityFrameworkCore.Design
-...
-
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.Design
 ```
 * Usar o comando Add-Migration para Code First
 
 ```bash
-...
-  Add-Migration InitialCreate -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
-...
-
+Add-Migration InitialCreate -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
 ```
 * Como aplicar as mudanças no banco
 
 ```bash
-...
-	Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
-...
-
+Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
 ```
 
 #### Execução da aplicação
@@ -46,7 +37,6 @@ Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendasAPI.W
 Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index.html** (ou na porta exibida no terminal). 
 
 O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do projeto na primeira execução.
-
 
 #### Execução Inicial de Endpoints (Postman)
 
@@ -96,22 +86,17 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
 
-
 #### Rotas dos métodos e funções
 ```bash
-...
-	Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
-	Metodo: POST /api/auth/login               Função: Login e obter token JWT              JWT: Não
-	Metodo: GET /health                        Função: Health check (API + base de dados)   JWT: Não
-	Metodo: GET/POST /api/Produtos             Função: Listar / Criar produtos              JWT: Sim
-	Metodo: GET/PUT/DELETE /api/Produtos/{id}  Função: Obter / Atualizar / Excluir produto  JWT: Sim
-...
-
+Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
+Metodo: POST /api/auth/login               Função: Login e obter token JWT              JWT: Não
+Metodo: GET /health                        Função: Health check (API + base de dados)   JWT: Não
+Metodo: GET/POST /api/Produtos             Função: Listar / Criar produtos              JWT: Sim
+Metodo: GET/PUT/DELETE /api/Produtos/{id}  Função: Obter / Atualizar / Excluir produto  JWT: Sim
 ```
-
 #### Executar Testes Unitários (Developer PowerShell)
 ```bash
-        dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
+dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
 
 Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos repositórios.
