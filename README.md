@@ -1,13 +1,15 @@
-### WebAPI-AspNetCore-EF10-JWT-SQLite
+## 🚀 WebAPI-AspNetCore-EF10-JWT-SQLite
 
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
-### O que você vai encontrar neste projeto
+#### O que você vai encontrar neste projeto
 
-- **JWT** - Implementação de autenticação e autorização em WebAPI
-- **EF Core** - EntityFramework com utilização de Code First 
-- **Injeção de Dependência** - Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários
-- **Testes Unitários** - Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários
+| Tecnologia | Descrição |
+|-----------|-----------|
+| **JWT** | Implementação de autenticação e autorização em WebAPI |
+| **Injeção de Dependência** |EntityFramework com utilização de Code First |
+| **Service** | Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários |
+| **Testes Unitários** | Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários |
 
 #### Requisitos e Detalhe do uso de EntityFrameworkCore 10
 
@@ -32,15 +34,15 @@ Add-Migration InitialCreate -Project "InfraEstrutura" -StartupProject "SistemaER
 Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
 ```
 
-#### Execução da aplicação
+#### Execução da Aplicação
 
-Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index.html** (ou na porta exibida no terminal). 
+- Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index.html** (ou na porta exibida no terminal). 
 
-O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do projeto na primeira execução.
+- O banco SQLite **(`SistemaERPOnlineForcaDeVendasAPI.db`)** é criado na raiz do projeto na primeira execução.
 
-#### Execução Inicial de Endpoints (Postman)
+#### 🧪 Execução Inicial de Endpoints
 
-**(1 -Registrar usuário)**
+**1 -Registrar usuário**
 - Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
@@ -53,7 +55,7 @@ O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do proj
 	}
    ```
 
-**(2 - Fazer Login e Copiar o Token Postman)**
+**2 - Fazer Login e Copiar o Token Postman**
 - Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
@@ -63,10 +65,10 @@ O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do proj
 	}
    ```
    
-**(3 - Fazer Login e Colar o Token Postman)**
+**3 - Fazer Login e Colar o Token Postman**
 - Clique na Aba do Arquivo ou para todos os arquivos, na pasta **Authorizathion** no Postman e cole **(Token)** (sem "Bearer") e salve 
 
-**(4 -Teste Autenticação)**
+**4 -Teste Autenticação**
 Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
