@@ -56,7 +56,7 @@ Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForca
    ```
 
 **2 - Fazer Login e Copiar o Token Postman**
-- Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
+- Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte Content-Type: application/json
 
    ```json
 	{
@@ -69,7 +69,7 @@ Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForca
 - Clique na Aba do Arquivo ou para todos os arquivos, na pasta **Authorizathion** no Postman e cole **(Token)** (sem "Bearer") e salve 
 
 **4 -Teste Autenticação**
-Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
+Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte Content-Type: application/json
 
    ```json
 	{
