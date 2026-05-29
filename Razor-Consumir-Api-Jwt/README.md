@@ -15,21 +15,6 @@ Executar a aplicação Backend **https://github.com/Marcelofazan/API-EF10-JWT** 
   
 O banco de dados é SQLite **(`SistemaERPOnlineForcaDeVendasAPI.db`)** , onde será maninupado por essa aplicação como Frontend.
 
-#### 🧪 Executar Endpoints ( Inicial Obrigatório)
-
-**1 -dadosadmin.json** (Arquivo de configuração que consta no projeto)
-- Enviar POST / Registro para criação do usuario:**https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON  
-
-```json
-{ 
-   "idempresa": 1, 
-   "email": "email@email.com", 
-   "senha": "123456", 
-   "nome": "Usuario", 
-   "taxapercentual": 10.00
-}
-```
-
 #### Rotas dos métodos 
 | Metodo | Descrição |
 |-----------|-----------|
