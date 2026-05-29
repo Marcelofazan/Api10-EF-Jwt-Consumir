@@ -1,4 +1,4 @@
-## 🚀 Api10-EF-Jwt
+## 🚀 Api10-EF-Jwt-Consumir
 Exemplo de criação de API em Clean Arquitetura com Autorização utilizando JWT, desenvolvido em .NET 10 com banco de dados SQLite.
 
 #### O que você vai encontrar neste projeto
